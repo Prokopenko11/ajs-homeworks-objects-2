@@ -12,17 +12,21 @@ const character = {
       id: 8,
       name: 'Двойной выстрел',
       icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон'
-    }, 
+      description: 'Двойной выстрел наносит двойной урон',
+    },
     {
       id: 9,
       name: 'Нокаутирующий удар',
-      icon: 'http://...'
-    }
-  ]	
-}
+      icon: 'http://...',
+    },
+  ],
+};
 
 test('testing destructObject function', () => {
   const result = destructObject(character);
-  expect(result).toStrictEqual([{id: 8, name: 'Двойной выстрел', icon: 'http://...',description: 'Двойной выстрел наносит двойной урон'}, {id: 9, name: 'Нокаутирующий удар', icon: 'http://...',description: 'Описание недоступно'}])
-})
+  expect(result).toStrictEqual([{
+    id: 8, name: 'Двойной выстрел', icon: 'http://...', description: 'Двойной выстрел наносит двойной урон',
+  }, {
+    id: 9, name: 'Нокаутирующий удар', icon: 'http://...', description: 'Описание недоступно',
+  }]);
+});
